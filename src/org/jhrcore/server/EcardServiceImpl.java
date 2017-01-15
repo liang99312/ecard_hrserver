@@ -603,7 +603,10 @@
 /* 603 */     list38.addAll(chuList);
 /* 604 */     int cl_len = list38.size();
 /* 605 */     List<Ecard_chu> list125 = new ArrayList();
-/* 606 */     int geshu_125 = i_125 * cl_len / (e.getM_zonge().intValue() - zddze);
+/* 606 */     int geshu_125 = 0;
+                if(e.getM_zonge().intValue() - zddze != 0){
+                    geshu_125 = i_125 * cl_len / (e.getM_zonge().intValue() - zddze);
+                }
 /* 607 */     float r = 0.0F;
 /* 608 */     if (geshu_125 == 0) {
 /* 609 */       r = i_125;
@@ -620,7 +623,10 @@
 /* 620 */     i_78 += (int)r * 125 / 78;
 /* 621 */     System.out.println("i_78=" + i_78 + " i_125=" + i_125 + " z=" + (i_125 * 0.0125D + i_78 * 0.0078D + (e.getM_zonge().intValue() - i_125 - i_78) * 0.0038D));
 /* 622 */     List<Ecard_chu> list78 = new ArrayList();
-/* 623 */     int geshu_78 = i_78 * cl_len / (e.getM_zonge().intValue() - zddze);
+/* 623 */     int geshu_78 = 0;
+                if(e.getM_zonge().intValue() - zddze != 0){
+                    geshu_78 = i_78 * cl_len / (e.getM_zonge().intValue() - zddze);
+                }
 /* 624 */     if (geshu_78 == 0) {
 /* 625 */       r = i_78;
 /*     */     } else {
